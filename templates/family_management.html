@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block title %}Gaza Camp Management System - Home{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/dashboard">Dashboard</a>
+                <span>/</span>
+                <a href="/families">Families</a>
+                <span>/</span>
+                <span class="current">Ahmad Family</span>
+            </div>
+
+            <div class="page-title">
+                <h1>Family Management</h1>
+                <button class="btn btn-primary">
+                    <span>📋</span> Generate Family Report
+                </button>
+            </div>
+
+            <!-- Family Profile Card -->
+            <div class="family-profile">
+                <div class="family-header">
+                    <div class="family-info">
+                        <h2>Ahmad Family</h2>
+                        <div class="family-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Family ID:</span>
+                                <span class="meta-value">F-2025-0042</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Registration Date:</span>
+                                <span class="meta-value">May 15, 2025</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Origin:</span>
+                                <span class="meta-value">Gaza City</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Current Shelter:</span>
+                                <span class="meta-value">Shelter A-3</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Family Size:</span>
+                                <span class="meta-value">6 members</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="family-actions">
+                        <button class="btn btn-secondary btn-sm">
+                            <span>✏️</span> Edit Family Info
+                        </button>
+                        <button class="btn btn-secondary btn-sm">
+                            <span>🏠</span> Change Shelter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Special Circumstances -->
+                <div class="special-circumstances">
+                    <h3>Special Circumstances</h3>
+                    <p>Family includes elderly members and children with special needs. Priority for medical services and accessibility accommodations.</p>
+                </div>
+            </div>
+
+            <!-- Family Members Section -->
+            <div class="section-title">
+                <h3>Family Members</h3>
+                <button class="btn btn-success btn-sm">
+                    <span>➕</span> Add Family Member
+                </button>
+            </div>
+
+            <!-- Members Table -->
+            <table class="members-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age/Gender</th>
+                        <th>Relationship</th>
+                        <th>ID Number</th>
+                        <th>Special Needs</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mohammad Ahmad</td>
+                        <td>42 / Male</td>
+                        <td>Head of Household</td>
+                        <td>9876543210</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-present">Present</span></td>
+                        <td class="member-actions">
+                            <button class="action-btn">✏️</button>
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fatima Ahmad</td>
+                        <td>38 / Female</td>
+                        <td>Spouse</td>
+                        <td>9876543211</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-present">Present</span></td>
+                        <td class="member-actions">
+                            <button class="action-btn">✏️</button>
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yusuf Ahmad</td>
+                        <td>15 / Male</td>
+                        <td>Child</td>
+                        <td>9876543212</td>
+                        <td><span class="special-needs-icon" title="Physical disability">♿</span></td>
+                        <td><span class="status-badge status-present">Present</span></td>
+                        <td class="member-actions">
+                            <button class="action-btn">✏️</button>
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amina Ahmad</td>
+                        <td>12 / Female</td>
+                        <td>Child</td>
+                        <td>9876543213</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-present">Present</span></td>
+                        <td class="member-actions">
+                            <button class="action-btn">✏️</button>
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ibrahim Ahmad</td>
+                        <td>8 / Male</td>
+                        <td>Child</td>
+                        <td>9876543214</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-present">Present</span></td>
+                        <td class="member-actions">
+                            <button class="action-btn">✏️</button>
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Khadija Ahmad</td>
+                        <td>68 / Female</td>
+                        <td>Parent</td>
+                        <td>9876543215</td>
+                        <td><span class="special-needs-icon" title="Chronic illness">🏥</span></td>
+                        <td><span class="status-badge status-relocated">Relocated</span></td>
+                        <td class="member-actions">
+                            <button class="action-btn">✏️</button>
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Add Member Form -->
+            <div class="add-member-form">
+                <h2 class="form-section-title">Add Family Member</h2>
+                <form action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="middleName">Middle Name</label>
+                            <input type="text" id="middleName" name="middleName">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" value="Ahmad" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dateOfBirth" class="required">Date of Birth</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender" class="required">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="relationship" class="required">Relationship to Head</label>
+                            <select id="relationship" name="relationship" required>
+                                <option value="">Select relationship</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="child">Child</option>
+                                <option value="parent">Parent</option>
+                                <option value="sibling">Sibling</option>
+                                <option value="grandparent">Grandparent</option>
+                                <option value="grandchild">Grandchild</option>
+                                <option value="other">Other Relative</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="idType">ID Document Type</label>
+                            <select id="idType" name="idType">
+                                <option value="">Select document type</option>
+                                <option value="nationalId">National ID</option>
+                                <option value="passport">Passport</option>
+                                <option value="birthCertificate">Birth Certificate</option>
+                                <option value="unrwaCard">UNRWA Card</option>
+                                <option value="other">Other</option>
+                                <option value="none">None Available</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="idNumber">ID Document Number</label>
+                            <input type="text" id="idNumber" name="idNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="hasSpecialNeeds">Special Needs</label>
+                            <select id="hasSpecialNeeds" name="hasSpecialNeeds">
+                                <option value="no">No special needs</option>
+                                <option value="yes">Has special needs</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Member</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

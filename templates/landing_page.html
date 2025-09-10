@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Gaza Camp Management System - Home{% endblock %}
+
+{% block content %}
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">GAZA <span>CAMP</span> MANAGEMENT</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Supporting Displaced Communities in Gaza</h1>
+            <p>A comprehensive management system for internally displaced persons camps, designed to streamline registration, track special needs, and improve resource allocation.</p>
+            <div class="hero-buttons">
+                <a href="/dashboard" class="btn btn-primary">Get Started</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>Our system provides essential tools for effective camp management and support for displaced communities.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👪</div>
+                    <h3>Family Registration</h3>
+                    <p>Efficiently register and manage family units, maintaining relationships between individuals and tracking their needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♿</div>
+                    <h3>Special Needs Tracking</h3>
+                    <p>Identify and monitor individuals with disabilities or special requirements to ensure appropriate care and accommodation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Resource Management</h3>
+                    <p>Track and allocate essential resources efficiently, ensuring equitable distribution to all camp residents.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Access</h3>
+                    <p>Access the system from any device, enabling field workers to update information in real-time from anywhere in the camp.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Health Services</h3>
+                    <p>Coordinate medical care and track health needs for vulnerable individuals requiring ongoing support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Data Analytics</h3>
+                    <p>Generate insights from camp data to inform decision-making and improve service delivery over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>The Gaza Camp Management System was developed to address the critical challenges faced in managing camps for internally displaced persons. In the wake of humanitarian crises, efficient systems for tracking and supporting displaced populations are essential.</p>
+                <p>Our platform enables humanitarian workers to maintain accurate records, coordinate services, and ensure that vulnerable individuals receive the care they need. By digitizing these processes, we aim to improve the living conditions and support provided to displaced communities during this challenging time.</p>
+                <a href="/dashboard" class="btn btn-primary">Access Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Improve Your Camp Management?</h2>
+            <p>Join humanitarian organizations already using our system to enhance their support for displaced communities.</p>
+            <a href="/register" class="btn btn-primary">Start Registration</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Gaza Camp Management</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#features">Our Mission</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Features</h3>
+                <ul>
+                    <li><a href="/register">Registration System</a></li>
+                    <li><a href="/special-needs">Special Needs Tracking</a></li>
+                    <li><a href="/families">Family Management</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2025 Gaza Camp Management System. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}

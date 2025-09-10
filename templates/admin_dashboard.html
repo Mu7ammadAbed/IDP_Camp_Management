@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+
+{% block title %}Gaza Camp Management System - Home{% endblock %}
+
+{% block content %}
+<!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">GAZA <span>CAMP</span></div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <div class="menu-category">Main</div>
+            <a href="/dashboard" class="menu-item active">
+                <span class="menu-icon">📊</span>
+                Dashboard
+            </a>
+            <a href="/families" class="menu-item">
+                <span class="menu-icon">👪</span>
+                Families
+            </a>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">👤</span>
+                Individuals
+            </a>
+            <a href="/special-neds" class="menu-item">
+                <span class="menu-icon">♿</span>
+                Special Needs
+            </a>
+
+            <div class="menu-category">Management</div>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">🏠</span>
+                Shelters
+            </a>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">📦</span>
+                Resources
+            </a>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">🏥</span>
+                Services
+            </a>
+
+            <div class="menu-category">Reports</div>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">📈</span>
+                Analytics
+            </a>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">📄</span>
+                Reports
+            </a>
+
+            <div class="menu-category">System</div>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">👥</span>
+                Users
+            </a>
+            <a href="#" class="menu-item">
+                <span class="menu-icon">⚙️</span>
+                Settings
+            </a>
+        </nav>
+
+        <div class="user-profile">
+            <div class="user-avatar">AM</div>
+            <div class="user-info">
+                <div class="user-name">Ahmed Mahmoud</div>
+                <div class="user-role">Camp Administrator</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="top-bar-actions">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="notification-bell">
+                    🔔
+                    <span class="notification-badge">3</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dashboard Summary Cards -->
+        <div class="dashboard-summary">
+            <div class="summary-card">
+                <div class="card-icon icon-blue">👪</div>
+                <div class="card-content">
+                    <div class="card-title">Total Families</div>
+                    <div class="card-value">1,248</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 12% from last month</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon icon-green">👤</div>
+                <div class="card-content">
+                    <div class="card-title">Total Individuals</div>
+                    <div class="card-value">5,742</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 8% from last month</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon icon-amber">♿</div>
+                <div class="card-content">
+                    <div class="card-title">Special Needs</div>
+                    <div class="card-value">487</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 15% from last month</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon icon-coral">🏠</div>
+                <div class="card-content">
+                    <div class="card-title">Shelter Capacity</div>
+                    <div class="card-value">87%</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 5% from last month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-container">
+            <div class="chart-card">
+                <div class="section-header">
+                    <h2 class="section-title">Population Demographics</h2>
+                    <div class="section-actions">
+                        <button class="btn btn-secondary btn-sm">Weekly</button>
+                        <button class="btn btn-secondary btn-sm">Monthly</button>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    [Age & Gender Distribution Chart]
+                </div>
+            </div>
+            <div class="chart-card">
+                <div class="section-header">
+                    <h2 class="section-title">Special Needs Distribution</h2>
+                    <div class="section-actions">
+                        <button class="btn btn-secondary btn-sm">Export</button>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    [Special Needs Categories Pie Chart]
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Registrations -->
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h2 class="section-title">Recent Registrations</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary btn-sm">View All</button>
+                </div>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Family</th>
+                        <th>Registration Date</th>
+                        <th>Special Needs</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IDP-2025-0157</td>
+                        <td>Layla Ibrahim</td>
+                        <td>Ibrahim Family</td>
+                        <td>June 1, 2025</td>
+                        <td>Yes</td>
+                        <td><span class="status-badge status-active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>IDP-2025-0156</td>
+                        <td>Youssef Khalil</td>
+                        <td>Khalil Family</td>
+                        <td>June 1, 2025</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>IDP-2025-0155</td>
+                        <td>Fatima Hassan</td>
+                        <td>Hassan Family</td>
+                        <td>May 31, 2025</td>
+                        <td>Yes</td>
+                        <td><span class="status-badge status-urgent">Urgent</span></td>
+                    </tr>
+                    <tr>
+                        <td>IDP-2025-0154</td>
+                        <td>Ahmed Mahmoud</td>
+                        <td>Mahmoud Family</td>
+                        <td>May 31, 2025</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>IDP-2025-0153</td>
+                        <td>Nour Saleh</td>
+                        <td>Saleh Family</td>
+                        <td>May 30, 2025</td>
+                        <td>No</td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Recent Activities -->
+        <div class="dashboard-section">
+            <div class="section-header">
+                <h2 class="section-title">Recent Activities</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary btn-sm">View All</button>
+                </div>
+            </div>
+            <ul class="activity-list">
+                <li class="activity-item">
+                    <div class="activity-icon icon-blue">👤</div>
+                    <div class="activity-content">
+                        <div class="activity-title">New IDP registered: Layla Ibrahim</div>
+                        <div class="activity-time">Today, 10:45 AM</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon icon-green">🏥</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Medical referral created for Fatima Hassan</div>
+                        <div class="activity-time">Today, 09:30 AM</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon icon-amber">🏠</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Shelter assignment updated for Khalil Family</div>
+                        <div class="activity-time">Yesterday, 04:15 PM</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon icon-coral">📦</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Resource distribution completed: Food packages</div>
+                        <div class="activity-time">Yesterday, 02:30 PM</div>
+                    </div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon icon-blue">♿</div>
+                    <div class="activity-content">
+                        <div class="activity-title">Special needs assessment completed for Omar Hassan</div>
+                        <div class="activity-time">Yesterday, 11:20 AM</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {% endblock %}

@@ -1,0 +1,277 @@
+{% extends "base.html" %}
+
+{% block title %}Gaza Camp Management System - Home{% endblock %}
+
+{% block content %}
+<!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">GAZA <span>CAMP</span> MANAGEMENT</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Families</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="#">Dashboard</a>
+                <span>/</span>
+                <a href="#">Special Needs</a>
+                <span>/</span>
+                <span class="current">Tracking</span>
+            </div>
+
+            <div class="page-title">
+                <h1>Special Needs & Disability Tracking</h1>
+                <button class="btn btn-primary">
+                    <span>📋</span> Generate Special Needs Report
+                </button>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-icon">♿</div>
+                    <div class="card-title">Physical Disabilities</div>
+                    <div class="card-value">127</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 12% from last month</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <div class="card-title">Sensory Disabilities</div>
+                    <div class="card-value">84</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 8% from last month</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <div class="card-title">Cognitive Disabilities</div>
+                    <div class="card-value">53</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 5% from last month</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏥</div>
+                    <div class="card-title">Chronic Illnesses</div>
+                    <div class="card-value">196</div>
+                    <div class="card-trend trend-up">
+                        <span>↑ 15% from last month</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h2 class="filter-title">Filter Special Needs</h2>
+                <form class="filter-form">
+                    <div class="filter-group">
+                        <label for="needType">Need Type</label>
+                        <select id="needType" name="needType">
+                            <option value="">All Types</option>
+                            <option value="physical_disability">Physical Disability</option>
+                            <option value="sensory_disability">Sensory Disability</option>
+                            <option value="cognitive_disability">Cognitive Disability</option>
+                            <option value="chronic_illness">Chronic Illness</option>
+                            <option value="mental_health">Mental Health</option>
+                            <option value="elderly_care">Elderly Care</option>
+                            <option value="pregnancy">Pregnancy</option>
+                            <option value="infant_care">Infant Care</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="severity">Severity</label>
+                        <select id="severity" name="severity">
+                            <option value="">All Severities</option>
+                            <option value="mild">Mild</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="severe">Severe</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="">All Priorities</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="verificationStatus">Verification Status</label>
+                        <select id="verificationStatus" name="verificationStatus">
+                            <option value="">All Statuses</option>
+                            <option value="verified">Verified</option>
+                            <option value="unverified">Unverified</option>
+                            <option value="in_progress">In Progress</option>
+                        </select>
+                    </div>
+                    <div class="filter-actions">
+                        <button type="submit" class="btn btn-primary btn-sm">Apply Filters</button>
+                        <button type="reset" class="btn btn-secondary btn-sm">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Special Needs Table -->
+            <table class="special-needs-table">
+                <thead>
+                    <tr>
+                        <th>Individual</th>
+                        <th>Need Type</th>
+                        <th>Description</th>
+                        <th>Severity</th>
+                        <th>Priority</th>
+                        <th>Verification</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yusuf Ahmad (15M)</td>
+                        <td><span class="need-type-icon">♿</span> Physical Disability</td>
+                        <td>Lower limb mobility impairment, requires crutches</td>
+                        <td>Moderate</td>
+                        <td><span class="priority-badge priority-medium">Medium</span></td>
+                        <td>Verified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Khadija Ahmad (68F)</td>
+                        <td><span class="need-type-icon">🏥</span> Chronic Illness</td>
+                        <td>Diabetes, hypertension, requires regular medication</td>
+                        <td>Severe</td>
+                        <td><span class="priority-badge priority-high">High</span></td>
+                        <td>Verified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Layla Mahmoud (42F)</td>
+                        <td><span class="need-type-icon">👁️</span> Sensory Disability</td>
+                        <td>Severe visual impairment, requires assistance</td>
+                        <td>Severe</td>
+                        <td><span class="priority-badge priority-high">High</span></td>
+                        <td>Verified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Omar Hassan (8M)</td>
+                        <td><span class="need-type-icon">🧠</span> Cognitive Disability</td>
+                        <td>Learning disability, requires special education support</td>
+                        <td>Moderate</td>
+                        <td><span class="priority-badge priority-medium">Medium</span></td>
+                        <td>In Progress</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fatima Khalil (35F)</td>
+                        <td><span class="need-type-icon">🫀</span> Mental Health</td>
+                        <td>PTSD, anxiety, requires counseling</td>
+                        <td>Moderate</td>
+                        <td><span class="priority-badge priority-medium">Medium</span></td>
+                        <td>Verified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ibrahim Nasser (72M)</td>
+                        <td><span class="need-type-icon">👴</span> Elderly Care</td>
+                        <td>Mobility issues, requires assistance with daily activities</td>
+                        <td>Moderate</td>
+                        <td><span class="priority-badge priority-medium">Medium</span></td>
+                        <td>Verified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amina Saleh (28F)</td>
+                        <td><span class="need-type-icon">🤰</span> Pregnancy</td>
+                        <td>7 months pregnant, requires prenatal care</td>
+                        <td>Moderate</td>
+                        <td><span class="priority-badge priority-high">High</span></td>
+                        <td>Verified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mohammed Qasim (45M)</td>
+                        <td><span class="need-type-icon">🏥</span> Chronic Illness</td>
+                        <td>Asthma, requires regular medication and inhaler</td>
+                        <td>Mild</td>
+                        <td><span class="priority-badge priority-low">Low</span></td>
+                        <td>Unverified</td>
+                        <td class="table-actions">
+                            <button class="action-btn" title="Edit">✏️</button>
+                            <button class="action-btn" title="View Details">👁️</button>
+                            <button class="action-btn" title="Create Referral">🏥</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <div class="pagination-item">«</div>
+                <div class="pagination-item active">1</div>
+                <div class="pagination-item">2</div>
+                <div class="pagination-item">3</div>
+                <div class="pagination-item">4</div>
+                <div class="pagination-item">5</div>
+                <div class="pagination-item">»</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2025 Gaza Camp Management System
+            </div>
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
