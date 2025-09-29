@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Gaza Camp Management System - Home{% endblock %}
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='css/special_needs_tracking.css') }}">{% endblock %}
 
 {% block content %}
 <!-- Header -->
@@ -9,9 +10,9 @@
             <div class="logo">GAZA <span>CAMP</span> MANAGEMENT</div>
             <nav>
                 <ul>
-                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="#">Registration</a></li>
-                    <li><a href="#">Families</a></li>
+                    <li><a href="/families">Families</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Reports</a></li>
                     <li><a href="#">Logout</a></li>
@@ -24,9 +25,9 @@
     <main class="main-content">
         <div class="container">
             <div class="breadcrumbs">
-                <a href="#">Dashboard</a>
+                <a href="/dashboard">Dashboard</a>
                 <span>/</span>
-                <a href="#">Special Needs</a>
+                <a href="/special-needs">Special Needs</a>
                 <span>/</span>
                 <span class="current">Tracking</span>
             </div>
